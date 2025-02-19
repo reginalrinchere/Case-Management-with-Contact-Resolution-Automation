@@ -1,19 +1,18 @@
-# Salesforce DX Project: Next Steps
+Royal Caribbean International, a leading cruise line and vacation company, regularly receives cases from external sources. These cases contain essential information, including Subject, Description, Web Email, Web Name, and Web Phone. To streamline case management, an Apex trigger has to be developed to automate contact resolution. This trigger checks for existing contacts based on email or phone, associates cases with matched contacts, and creates new contacts if none are found. Additionally, it generates a follow-up task for the newly created contacts.
 
-Now that you’ve created a Salesforce DX project, what’s next? Here are some documentation resources to get you started.
+ 
 
-## How Do You Plan to Deploy Your Changes?
+Automation Steps:
 
-Do you want to deploy a set of changes, or create a self-contained application? Choose a [development model](https://developer.salesforce.com/tools/vscode/en/user-guide/development-models).
+Case Creation: When a new case is created from an external source for Royal Caribbean International, it includes the following pre-populated fields: Subject, Description, Web Email, Web Name, Web Phone.
 
-## Configure Your Salesforce DX Project
+Contact Check: The automation checks if a contact with the same email (Web Email) or phone (Web Phone) already exists in your Salesforce Contacts.
 
-The `sfdx-project.json` file contains useful configuration information for your project. See [Salesforce DX Project Configuration](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_ws_config.htm) in the _Salesforce DX Developer Guide_ for details about this file.
+Existing Contact: If a matching contact is found, the case is tagged with the existing contact, streamlining case management.
 
-## Read All About It
+New Contact Creation: If no matching contact is found, a new contact is created with the following details:
 
-- [Salesforce Extensions Documentation](https://developer.salesforce.com/tools/vscode/)
-- [Salesforce CLI Setup Guide](https://developer.salesforce.com/docs/atlas.en-us.sfdx_setup.meta/sfdx_setup/sfdx_setup_intro.htm)
-- [Salesforce DX Developer Guide](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_intro.htm)
-- [Salesforce CLI Command Reference](https://developer.salesforce.com/docs/atlas.en-us.sfdx_cli_reference.meta/sfdx_cli_reference/cli_reference.htm)
-"# Case-Management-with-Contact-Resolution-Automation" 
+Contact Last Name: Web Name
+Contact Phone: Web Phone
+Contact Email: Web Email
+This automation not only facilitates efficient case handling for Royal Caribbean International but also helps enhance the overall customer support experience by promptly resolving cases and maintaining accurate contact records.
